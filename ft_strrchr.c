@@ -12,22 +12,22 @@
 
 #include "libft.h"
 
-char    *ft_strrchr(const char *str, int  c)
+char    *ft_strrchr(const char *s, int  c)
 {
     int i;
 
-    i = ft_strlen(str) - 1;
-    while (str[i] != c && str[i])
+    i = ft_strlen(s) - 1;
+    while (s[i] != c && s[i])
         i--;
-    if (str[i] == c)
-        return ((char *)&str[i]);
+    if (s[i] == c)
+        return ((char *)&s[i]);
     return (NULL);
 }
 /*
 int main(void)
 {
-    char    *str = "the cake is a lie !\0I'm hidden lol\r\n";
-    int    c = 'e';
+    char    *str = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
+    int    c = '\0';
     printf("Og func : %s\n", strrchr(str, c));
     printf("My func : %s\n", ft_strrchr(str, c));
     return 0;
