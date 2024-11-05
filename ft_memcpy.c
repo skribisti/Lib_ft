@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:05:28 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/05 11:11:00 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:22:34 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
     size_t  i;
 
     i = 0;
+    if (!n)
+        return ()
     while (i < n)
     {
         ((char *)dest)[i] = ((char *)src)[i];
