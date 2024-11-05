@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:05:28 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/05 13:53:38 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:58:24 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
     size_t  i;
 
     i = 0;
-    if (src == 0)
+    if (src == 0 || n == 0)
     {
         if (dest == 0)
             return (NULL);
@@ -30,18 +30,11 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
     }
     return (dest);
 }
-
+/*
 int main ()
 {
-   const char *src = ((void *)0);
-   char *dest = ((void *)0);
-   
-   memcpy(dest, src, 3);
-   printf("Og func = %s\n", dest);
-
-   dest = ((void *)0);
-   ft_memcpy(dest, src, 3);
-   printf("My func = %s\n", dest);
+   //printf("Og func = %s\n", memcpy("            ", ((void*)0), 17));
+   printf("My func = %s\n", ft_memcpy("            ", ((void*)0), 17));
 
    return(0);
-}
+}*/
