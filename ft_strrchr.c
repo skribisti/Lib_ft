@@ -16,8 +16,8 @@ char    *ft_strrchr(const char *str, int  c)
 {
     int i;
 
-    i = ft_strlen(str);
-    while (str[i] != c)
+    i = ft_strlen(str) - 1;
+    while (str[i] != c && str[i])
         i--;
     if (str[i] == c)
         return ((char *)&str[i]);
@@ -26,9 +26,9 @@ char    *ft_strrchr(const char *str, int  c)
 /*
 int main(void)
 {
-    char    *str = "Helo";
-    char    c = 'a';
-    printf("Og func : %p\n", strrchr(str, c));
-    printf("My func : %p\n", ft_strrchr(str, c));
+    char    *str = "the cake is a lie !\0I'm hidden lol\r\n";
+    int    c = 'e';
+    printf("Og func : %s\n", strrchr(str, c));
+    printf("My func : %s\n", ft_strrchr(str, c));
     return 0;
 }*/

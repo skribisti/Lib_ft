@@ -23,7 +23,7 @@ char    *ft_strchr(const char *str, int  c)
         return ((char *)&str[i]);
     return (NULL);
 }
-
+/*
 int main(void)
 {
     char    *str = "the cake is a lie !\0I'm hidden lol\r\n";
@@ -31,4 +31,4 @@ int main(void)
     printf("Og func : %s\n", strchr(str, c));
     printf("My func : %s\n", ft_strchr(str, c));
     return 0;
-}
+}*/
