@@ -6,13 +6,13 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:14:58 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/05 14:16:44 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:16:57 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_toupper(int c)
 {
-	if (('a' <= c && c <= 'z')
+	if ('a' <= c && c <= 'z')
         c = c + 32;
     return (c);
 }
