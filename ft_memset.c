@@ -6,11 +6,11 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:50:45 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/05 10:05:53 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:11:08 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

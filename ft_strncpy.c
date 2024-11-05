@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char    ft_strncpy(char *dest, char *src, unsigned int n)
 {
-    int i;
+    unsigned int i;
 
     i = 0;
     while (src[i] && i < n)
@@ -27,5 +27,6 @@ char    ft_strncpy(char *dest, char *src, unsigned int n)
         dest[i] = 0;
         i++;
     }    
-    return (dest);
+    //return (dest);
+    return 'a';
 }

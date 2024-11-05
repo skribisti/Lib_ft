@@ -6,44 +6,24 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:39:17 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/05 10:04:08 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:52:18 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-
-int	ft_strlen(char	*str)
+int	ft_isalpha(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-int	ft_isalpha(char	*str)
-{
-	int		i;
-	char	c;
-
-	if (ft_strlen(str) == 0)
+	if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))
 		return (1);
-	i = 0;
-	while (str[i])
-	{
-		c = str[i];
-		if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))
-			i++;
-		else
-			return (1);
-	}
 	return (0);
 }
 /*
-#include <stdio.h>
+#include <ctype.h>
 int	main(void)
 {
-	printf("%d", ft_isalpha("allo"));
-	printf("%d", ft_isalpha("dadw4"));
-}*/
+	int	c = 70;
+	printf("%d\n", ft_isalpha(c));
+	printf("%d", isalpha(c));
+}
+*/

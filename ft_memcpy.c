@@ -6,11 +6,11 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:05:28 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/05 10:05:43 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:11:00 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void *ft_memcpy(void *dest, const void *src, size_t n)
 {

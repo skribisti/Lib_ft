@@ -1,6 +1,18 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/05 11:08:59 by norabino          #+#    #+#             */
+/*   Updated: 2024/11/05 11:08:59 by norabino         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char    *ft_strdup(char *str)
+#include "libft.h"
+
+char    *ft_strdup(const char *str)
 {
     char    *tab;
     int     i;

@@ -11,39 +11,29 @@
 /* ************************************************************************** */
 
 #include <bsd/string.h>
-#include <libft.h>
+#include "libft.h"
 
-int    ft_strlen(char *str)
+char    *ft_strnstr(const char *big, const char *little, size_t len)
 {
-    int    i;
-
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
-}
-
-char    *ft_strnstr(char *str, char *to_find, size_t len)
-{
-    int    i;
-    int     j;   
+    size_t      i;
+    size_t      j;   
 
     i = 0;
     j = 0;
-    if (to_find[0] == '\0' || len == 0)
+    if (little[0] == '\0' || len == 0)
     {
-        if (str[i] == '\0')
+        if (big[i] == '\0')
             return ("");
-        return (str);
+        return ((char *)big);
     }
-    while (str[i])
+    while (big[i])
     {
         j = 0;
-        while (str[i + j] == to_find[j] && j < len)
+        while (big[i + j] == little[j] && j < len)
         {
             j++;
-            if (j == ft_strlen(to_find))
-                return (&str[i]);
+            if (j == ft_strlen(little))
+                return ((char *)&big[i]);
         }
         i++;
     }

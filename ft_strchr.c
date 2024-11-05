@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char    *ft_strchr(char *str, char  c)
+char    *ft_strchr(const char *str, int  c)
 {
     int i;
 
@@ -20,15 +20,15 @@ char    *ft_strchr(char *str, char  c)
     while (str[i] != c)
         i++;
     if (str[i] == c)
-        return (&str[i]);
+        return ((char *)&str[i]);
     return (NULL);
 }
 /*
 int main(void)
 {
     char    *str = "Helo";
-    char    c = 'e';
-    printf("Og func : %p\n", strchr(str, c));
-    printf("My func : %p\n", ft_strchr(str, c));
+    int    c = 'e';
+    printf("Og func : %s\n", strchr(str, c));
+    printf("My func : %s\n", ft_strchr(str, c));
     return 0;
 }*/

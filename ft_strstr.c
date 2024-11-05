@@ -10,22 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-
-int    ft_strlen(char *str)
-{
-    int    i;
-
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
-}
+#include "libft.h"
 
 char    *ft_strstr(char *str, char *to_find)
 {
-    int    i;
-    int    j;
+    size_t    i;
+    size_t    j;
 
     i = 0;
     j = 0;

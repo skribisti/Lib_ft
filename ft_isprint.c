@@ -6,11 +6,11 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:05:12 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/05 10:05:15 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:52:35 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int ft_isprint(int c)
 {
@@ -19,10 +19,9 @@ int ft_isprint(int c)
     return (0);
 }
 /*
-#include <stdio.h>
 int main(void)
 {
     int c = 'y';
     printf("Og func : %d \n", isprint(c));
     printf("My func : %d", ft_isprint(c));
-}*
+}*/
