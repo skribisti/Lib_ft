@@ -17,18 +17,18 @@ char    *ft_strchr(const char *str, int  c)
     int i;
 
     i = 0;
-    while (str[i] != c)
+    while (str[i] != c && str[i])
         i++;
     if (str[i] == c)
         return ((char *)&str[i]);
     return (NULL);
 }
-/*
+
 int main(void)
 {
-    char    *str = "Helo";
-    int    c = 'e';
+    char    *str = "the cake is a lie !\0I'm hidden lol\r\n";
+    int    c = 'x';
     printf("Og func : %s\n", strchr(str, c));
     printf("My func : %s\n", ft_strchr(str, c));
     return 0;
-}*/
+}
