@@ -1,5 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/05 10:07:46 by norabino          #+#    #+#             */
+/*   Updated: 2024/11/05 10:07:46 by norabino         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <bsd/string.h>
-#include <stdio.h>
+#include <libft.h>
 
 int    ft_strlen(char *str)
 {
@@ -37,7 +49,7 @@ char    *ft_strnstr(char *str, char *to_find, size_t len)
     }
     return (0);
 }
-
+/*
 int main(int argc, char *argv[])
 {
     char    *str = argv[1];
@@ -49,4 +61,4 @@ int main(int argc, char *argv[])
     printf("OG func :%s\n", strnstr(str, to_find, len));
     printf("My func :%s", ft_strnstr(str, to_find, len));
     return (0);
-}
+}*/

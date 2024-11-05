@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: norabino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:39:17 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/04 14:25:40 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:04:08 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 int	ft_strlen(char	*str)
 {
