@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:34:40 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/05 11:52:38 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:20:34 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	ft_isdigit(int	c)
 {
 	if (c >= '0' && c <= '9')
-		return (0);
-	return (1);
+		return (1);
+	return (0);
 }
 /*
 int	main(void)
