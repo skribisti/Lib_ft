@@ -26,10 +26,17 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 /*
 int main()
 {
-    char str1[] = "ABCd";
-    char str2[] = "ABCe";
+    char *str1 = "\200";
+    char *str2 = "\0";
+	int	i = 0;
 
-    printf("%d", ft_strncmp(str1, str2, 3));
+	while (str1[i])
+	{
+		printf("%c\n", str1[i]);
+		i++;
+	}
+	printf("Og func :%d\n", strncmp(str1, str2, 1));
+    printf("My func :%d", ft_strncmp(str1, str2, 1));
     return 0;
 }
 */
