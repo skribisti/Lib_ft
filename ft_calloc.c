@@ -6,12 +6,32 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:41:00 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 16:08:33 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:09:21 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+void	*ft_calloc(size_t count, size_t size)
+{
+	size_t	total;
+	char	*mem;
+	size_t	i;
+
+	total = count * size;
+	mem = malloc(total);
+	if (mem == NULL)
+		return (NULL);
+	i = 0;
+	while (i < total)
+	{
+		mem[i] = 0;
+		i++;
+	}
+	return (mem);
+}
+
+/*
 void    *ft_calloc(size_t nmemb, size_t size)
 {
     char    *str;
@@ -21,10 +41,11 @@ void    *ft_calloc(size_t nmemb, size_t size)
     str = malloc(total);
     if (!str)
         return (NULL);
-    bzero(str, nmemb);
+    ft_bzero(str, nmemb);
     return (str);
 }
-/*
+
+
 int main(void)
 {
     int size = 8539;
