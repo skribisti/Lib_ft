@@ -31,7 +31,7 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
         j = 0;
         //printf("i = %d\n", (int)i);
         while (big[i + j] == little[j] && i < len
-        && j + ft_strlen(little) < len)
+        && i + j < len)
         {
             //printf("j = %d\n\n", (int)j);
             //printf("big[i + j] = %c\n", (char)big[i + j]);
@@ -50,7 +50,7 @@ int main()
 {
     char    *big = "MZIRIBMZIRIBMZE123";
     char    *little = "MZIRIBMZE";
-    size_t  len = ft_strlen(little);
+    size_t  len = 9;
 
     printf("My func : %s", ft_strnstr(big, little, len));
     return (0);
