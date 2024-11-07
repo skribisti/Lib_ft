@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 12:42:42 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 12:47:42 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:47:54 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 size_t    ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t	i;
-
-    if (size < ft_strlen(src))
-        
+	size_t	i;  
 	i = 0;
 	while (src[i] && (i < size - 1))
 	{
