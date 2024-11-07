@@ -26,15 +26,15 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
             return ("");
         return ((char *)big);
     }
-    printf("len = %d\n", (int)len);
+    //printf("len = %d\n", (int)len);
     while (big[i])
     {
         j = 0;
         while (big[i + j] == little[j] && j < len - 1 && j < ft_strlen(little))
         {
-            printf("big[i + j] = %c\n", (char)big[i + j]);
-            printf("little[j] = %c\n", (char)little[i]);
-            printf("j = %d\n", (int)j);
+            //printf("big[i + j] = %c\n", (char)big[i + j]);
+            //printf("little[j] = %c\n", (char)little[i]);
+            //printf("j = %d\n", (int)j);
             
             if (j == ft_strlen(little))
                 return ((char *)big + i);
