@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 11:11:14 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 11:27:38 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 11:28:03 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 void    *ft_memmove(void *dest, const void *src, size_t n)
 {
-    if (src < dest)
-        return (ft_memcpy(dest, src, n));
     
     char    *d;
     char    *s;
     size_t  i = 0;
     
+    if (src < dest)
+        return (ft_memcpy(dest, src, n));
+    
     if (src == 0 && n != 0 && dest == 0)
         return (NULL);
+    
     d = (char *)dest;
     s = (char *)src;
     while (i < n)
@@ -31,6 +33,5 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
         i++;
     }
     return (dest);
-    
 }
 
