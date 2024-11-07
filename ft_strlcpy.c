@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 12:42:42 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 12:45:41 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:47:42 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t    ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
+    if (size < ft_strlen(src))
+        
 	i = 0;
 	while (src[i] && (i < size - 1))
 	{
@@ -23,5 +25,5 @@ size_t    ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[i] = '\0';
-	return ((size_t)dst);
+	return (ft_strlen(dst));
 }
