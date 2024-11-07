@@ -29,12 +29,13 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
     while (big[i] && j < ft_strlen(little))
     {
         j = 0;
-        //printf("i = %d\n", (int)i);
-        while (big[i + j] == little[j] && i < len - 1 && j < len)
+        printf("i = %d\n", (int)i);
+        while (big[i + j] == little[j] 
+            && (ft_strlen(big) - i > ft_strlen(little) + i) && j < len)
         {
-            //printf("j = %d\n\n", (int)j);
-            //printf("big[i + j] = %c\n", (char)big[i + j]);
-            //printf("little[j] = %c\n\n\n", (char)little[j]);
+            printf("j = %d\n\n", (int)j);
+            printf("big[i + j] = %c\n", (char)big[i + j]);
+            printf("little[j] = %c\n\n\n", (char)little[j]);
             j++;
             if (j == ft_strlen(little))
                 return ((char *)big + i);
@@ -47,9 +48,9 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
 /*
 int main()
 {
-    char    *big = "AAAAAA";
-    char    *little = "AAAAAA";
-    size_t  len = ft_strlen(big);
+    char    *big = "MZIRIBMZIRIBMZE123";
+    char    *little = "MZIRIBMZE";
+    size_t  len = ft_strlen(little);
 
     printf("My func : %s", ft_strnstr(big, little, len));
     return (0);
