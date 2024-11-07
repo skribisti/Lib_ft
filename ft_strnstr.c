@@ -26,35 +26,31 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
             return ("");
         return ((char *)big);
     }
-    //printf("len = %d\n", (int)len);
+    printf("len = %d\n", (int)len);
     while (big[i])
     {
         j = 0;
-        while (big[i + j] == little[j] && j < len - 1)
+        while (big[i + j] == little[j] && j < len - 1 && j < ft_strlen(little))
         {
-            //printf("j = %d\n", (int)j);
-            j++;
+            printf("big[i + j] = %c\n", (char)big[i + j]);
+            printf("little[j] = %c\n", (char)little[i]);
+            printf("j = %d\n", (int)j);
+            
             if (j == ft_strlen(little))
-                return ((char *)&big[i]);
+                return ((char *)big + i);
+            j++;
         }
         i++;
     }
-    return (0);
+    return (NULL);
 }
 /*
 int main()
 {
-    char    *big = "MZIRIBMZIRIBMZE123";
-    char    *little = "MZIRIBMZE";
-    size_t  len = ft_strlen(little);
+    char    *big = "123456789";
+    char    *little = "9";
+    size_t  len = 8;
 
-    //printf("OG func :%d\n", strnstr(big, little, len));
-    printf("My func :%s", ft_strnstr(big, little, len));
-    //char    *i1 = strnstr(big, little, len);
-    //char    *i2 = ft_strnstr(big, little, len);
-    //if (i1 == i2)
-    //    printf("%s", "Bon");
-    //else
-    //   printf("%s", "Pas bon");
+    printf("My func : %s", ft_strnstr(big, little, len));
     return (0);
 }*/
