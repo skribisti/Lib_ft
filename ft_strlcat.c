@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:13:40 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 16:17:52 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:18:39 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,29 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	src_len;
-	size_t	cur;
+	size_t	orig_dstlen;
+	size_t	total_len;
+	size_t	i;
+	size_t	j;
 
-	src_len = ft_strlen(dst);
-	cur = 0;
-	if (dstsize <= src_len)
-		return (ft_strlen(src) + dstsize);
-	while (src[cur] && (src_len + cur) < (dstsize - 1))
+	total_len = ft_strlen(src);
+	if (dstsize != 0)
 	{
-		dst[src_len + cur] = src[cur];
-		cur++;
+		orig_dstlen = ft_strlen(dst);
+		dstsize -= 1;
+		i = orig_dstlen;
+		j = 0;
+		while (i < dstsize && src[j])
+			dst[i++] = src[j++];
+		if (dstsize + 1 > orig_dstlen)
+		{
+			dst[i] = '\0';
+			total_len += orig_dstlen;
+		}
+		else
+			total_len += dstsize + 1;
 	}
-	dst[src_len + cur] = 0;
-	return (ft_strlen(src) + src_len);
+	return (total_len);
 }
 
 
