@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
+#include <strings.h>
 #include "libft.h"
 
 char    *ft_strnstr(const char *big, const char *little, size_t len)
@@ -40,15 +40,14 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
     return (0);
 }
 /*
-int main(int argc, char *argv[])
+int main()
 {
-    char    *str = argv[1];
-    char    *to_find = argv[2];
+    char    *big = "";
+    char    *little = "";
     size_t  len = 2;
-    
-    (void)argc;
-    printf("%s\n", str);
-    printf("OG func :%s\n", strnstr(str, to_find, len));
-    printf("My func :%s", ft_strnstr(str, to_find, len));
+
+    printf("%s\n", big);
+    //printf("OG func :%d\n", strnstr(big, little, len));
+    printf("My func :%s", ft_strnstr(big, little, len));
     return (0);
 }*/
