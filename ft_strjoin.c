@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:56:01 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 17:01:18 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:01:56 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char *ft_strjoin(char const *s1, char const *s2)
     res = (char *)malloc(total_size);
     i = 1;
     while(s1[i++])
-        res[i] = s1[i]
+        res[i] = s1[i];
     j = i;
     while (s2[j++])
         res[j] = s2[j];
