@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:41:00 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 16:07:54 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:08:33 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void    *ft_calloc(size_t nmemb, size_t size)
     str = malloc(total);
     if (!str)
         return (NULL);
-    ft_bzero(str, nmemb);
+    bzero(str, nmemb);
     return (str);
 }
 /*
