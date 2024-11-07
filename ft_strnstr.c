@@ -53,4 +53,4 @@ int main()
 
     printf("My func : %s", ft_strnstr(big, little, len));
     return (0);
-}/*
+}*/
