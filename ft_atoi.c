@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:16:38 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 15:28:34 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:38:00 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int        ft_atoi(const char *nptr)
     char    *str;
 
     str = (char *)nptr;
+    i = 0;
     sign = 1;
     res = 0;
     while ((str[i] == 32) || (str[i] >= 9 && str[i] <= 13))
@@ -37,3 +38,10 @@ int        ft_atoi(const char *nptr)
     }
     return (res * sign);
 }
+/*
+int main(void)
+{
+    char    *str = "";
+    printf("My func :%d\n", ft_atoi(str));
+    printf("Og func :%d\n", atoi(str));
+}*/
