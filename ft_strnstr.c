@@ -30,7 +30,8 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
     {
         j = 0;
         //printf("i = %d\n", (int)i);
-        while (big[i + j] == little[j] && j + ft_strlen(little) < len)
+        while (big[i + j] == little[j] && i < len
+        && j + ft_strlen(little) < len)
         {
             //printf("j = %d\n\n", (int)j);
             //printf("big[i + j] = %c\n", (char)big[i + j]);
