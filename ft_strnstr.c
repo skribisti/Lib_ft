@@ -30,7 +30,7 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
     {
         j = 0;
         //printf("i = %d\n", (int)i);
-        while (big[i + j] == little[j] && i < len - 1 && j < len - 1)
+        while (big[i + j] == little[j] && i < len - 1 && j < len)
         {
             //printf("j = %d\n\n", (int)j);
             //printf("big[i + j] = %c\n", (char)big[i + j]);
@@ -47,9 +47,9 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
 /*
 int main()
 {
-    char    *big = "123456789";
-    char    *little = "9";
-    size_t  len = 8;
+    char    *big = "AAAAAA";
+    char    *little = "AAAAAA";
+    size_t  len = ft_strlen(big);
 
     printf("My func : %s", ft_strnstr(big, little, len));
     return (0);
