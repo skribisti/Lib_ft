@@ -18,6 +18,8 @@ char    *ft_strdup(const char *str)
     int     i;
 
     tab = (char *)malloc(ft_strlen(str) + 1);
+    if (!tab)
+        return (NULL);
     i = 0;
     while (str[i])
     {
