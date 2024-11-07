@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 12:42:42 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 14:46:16 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:46:52 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ size_t    ft_strlcpy(char *dst, const char *src, size_t size)
     
 	i = 0;
     if (!dst || !src)
-	{
+	/*{
         return (0);	
-	}
+	}*/
 	if (size < 1)
 	{
 		return (ft_strlen(src));
