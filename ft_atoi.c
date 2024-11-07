@@ -6,13 +6,13 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:16:38 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 15:24:55 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:26:44 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int        ft_atoi(const char *nptr);
+int        ft_atoi(const char *nptr)
 {
     int res;
     int sign;
