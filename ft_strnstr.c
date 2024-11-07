@@ -26,13 +26,13 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
             return ("");
         return ((char *)big);
     }
-    printf("len = %d\n", (int)len);
+    //printf("len = %d\n", (int)len);
     while (big[i])
     {
         j = 0;
         while (big[i + j] == little[j] && j < len - 1)
         {
-            printf("j = %d\n", (int)j);
+            //printf("j = %d\n", (int)j);
             j++;
             if (j == ft_strlen(little))
                 return ((char *)&big[i]);
