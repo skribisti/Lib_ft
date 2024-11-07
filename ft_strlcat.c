@@ -6,37 +6,34 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:13:40 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 16:14:51 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:16:09 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *d, const char *s, size_t dstsize)
 {
-	size_t i;
-	size_t j;
-	size_t d;
-	size_t s;
+	size_t	dst_len;
+	size_t	index;
+	size_t	i;
 
-	i = ft_strlen(dst);
-	j = 0;
-	d = ft_strlen(dst);
-	s = ft_strlen(src);
-	if (dstsize < 1)
-		return (s + dstsize);
-	while (src[j] && i < dstsize - 1)
+	dst_len = ft_strlen(d);
+	index = 0;
+	while (d[index])
+		index++;
+	i = 0;
+	while (s[i] && (i + index + 1) < (dstsize))
 	{
-		dst[i] = src[j];
+		d[index + i] = s[i];
 		i++;
-		j++;
 	}
-	dst[i] = '\0';
-	if (dstsize < d)
-		return (s + dstsize);
+	if (i < dstsize)
+		d[index + i] = '\0';
+	if (dstsize <= dst_len)
+		return (ft_strlen(s) + dstsize);
 	else
-		return (d + s);
+		return (ft_strlen(s) + dst_len);
 }
-
 
 
