@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 11:32:51 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 11:36:48 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 11:37:14 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void    *ft_memchr(const void *s, int c, size_t n)
 
     while (i < n)
     {
-        if (s[i] == c)
+        if (((char *)s)[i] == c)
             return (s + i);
         i++;
     }
