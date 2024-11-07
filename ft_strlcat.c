@@ -6,31 +6,30 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:13:40 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 16:17:01 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:17:52 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
-{
-	size_t	i;
-	size_t	j;
-	size_t	len_dst;
 
-	i = 0;
-	j = 0;
-	len_dst = ft_strlen(dst);
-	while (dst[i] != '\0' && i < size)
-		i++;
-	while (src[j] != '\0' && i < size - 1)
-		dst[i++] = src[j++];
-	if (size != 0 && size >= len_dst)
-		dst[i] = '\0';
-	if (size < ft_strlen(dst))
-		return (ft_strlen(src) + size);
-	else
-		return (ft_strlen(src) + len_dst);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+	size_t	src_len;
+	size_t	cur;
+
+	src_len = ft_strlen(dst);
+	cur = 0;
+	if (dstsize <= src_len)
+		return (ft_strlen(src) + dstsize);
+	while (src[cur] && (src_len + cur) < (dstsize - 1))
+	{
+		dst[src_len + cur] = src[cur];
+		cur++;
+	}
+	dst[src_len + cur] = 0;
+	return (ft_strlen(src) + src_len);
 }
+
 
 
