@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 10:05:28 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 11:14:50 by norabino         ###   ########.fr       */
+/*   Created: 2024/11/07 11:11:14 by norabino          #+#    #+#             */
+/*   Updated: 2024/11/07 11:16:48 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void    *ft_memcpy(void *dest, const void *src, size_t n)
+void    *ft_memmove(void *dest, const void *src, size_t n)
 {
+    if (&src > &dest)
+        return (ft_memcpy(dest, src, n));
+    
     char    *d;
     char    *s;
     
@@ -24,12 +25,5 @@ void    *ft_memcpy(void *dest, const void *src, size_t n)
     while (n--)
         d[n] = s[n];
     return (dest);
+    
 }
-/*
-int main ()
-{
-   printf("Og func = %s\n", memcpy((void*)0, (void*)0, 3));
-   printf("My func = %s\n", ft_memcpy((void*)0, (void*)0, 3));
-
-   return(0);
-}*/
