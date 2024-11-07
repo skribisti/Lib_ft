@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:09:03 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 17:33:42 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:34:35 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ char *ft_strtrim(char const *s1, char const *set)
     res[i] = 0;
     return (res);
 }
-
+/*
 int main(void)
 {
     char    *str1 = "Hello   Please Trim me !H";
     printf("%s", ft_strtrim(str1, "H"));
     return (0);
-}
+}*/
