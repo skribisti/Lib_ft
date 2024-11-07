@@ -20,8 +20,10 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
 
     i = 0;
     j = 0;
-    if (little[0] == '\0' || len == 0 || (big[0] == '\0' && !ft_strlen(big)))
+    if (little[0] == '\0' || len == 0)
         return ((char *)big);
+    if (big[0] = '\0')
+        return (NULL);
     while (big[i] && j < ft_strlen(little))
     {
         j = 0;
@@ -44,9 +46,9 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
 /*
 int main()
 {
-    char    *big = ((void *)0);
-    char    *little = "fake";
-    size_t  len = 0;
+    char    *big = "";
+    char    *little = "oh no not the empty string !";
+    size_t  len = ft_strlen(little);
 
     printf("My func : %s", ft_strnstr(big, little, len));
     return (0);
