@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:20:52 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 16:26:37 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:28:37 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     i = 0;
     while (i < len)
     {
-        str[i] = s[start + i];
+        str[i] = s[start - 1 + i];
         i++;
     }
     return (str);
