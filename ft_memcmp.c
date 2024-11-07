@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 11:39:32 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 12:38:40 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:38:56 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int        ft_memcmp(const void *s1, const void *s2, size_t n)
         i++;
     }
     return (0);
+}
 /*
 int main(void)
 {
