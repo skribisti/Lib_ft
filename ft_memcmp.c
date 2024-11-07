@@ -6,9 +6,11 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 11:39:32 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 11:54:55 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 11:55:30 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int        ft_memcmp(const void *s1, const void *s2, size_t n)
 {
