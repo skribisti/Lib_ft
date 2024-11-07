@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:09:03 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 17:20:59 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:21:42 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char *ft_strtrim(char const *s1, char const *set)
     int     i;
 
     lset = ft_strlen(set);
-    total_len = ft_len(s1, lset);
+    total_len = ft_len(s1, lset) + 1;
     res = malloc(total_len);
     if (!res)
         return(NULL);
@@ -35,5 +35,6 @@ char *ft_strtrim(char const *s1, char const *set)
         res[i] = s1[i + lset];
         i++;
     }
+    res[i] = 0;
     return (res);
 }
