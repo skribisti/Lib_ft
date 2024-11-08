@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:29:14 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 11:02:55 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:24:45 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ char    *ft_strndup(char *str, int  n)
     char    *tab;
     int     i;
 
+    //printf("n = %d\n", n);
     tab = (char *)malloc(ft_strlen(str) + 1);
+    //printf("len tab = %zu\n", ft_strlen(tab));
     if (!tab)
         return (NULL);
     i = 0;
@@ -46,7 +48,7 @@ int ft_countwords(char const *s, char c)
     i = 0;
     while(s[i])
     {
-        if((!ft_issep(s[i], c) && ft_issep(s[i + 1], c)))
+        if((!ft_issep(s[i], c) && ft_issep(s[i + 1], c)) || !s[i + 1])
             cpt++;
         i++;
     }
@@ -73,11 +75,14 @@ char **ft_split(char const *s, char c)
     {
         while(ft_issep(s[d], c) && s[d])
             d++;
+        //printf("d = %d\n", d);
         f = d;
         while(!ft_issep(s[f], c) && s[f])
             f++;
-        if (s[f])
+        //printf("f = %d\n", f);
+        if (s[d])
             res[l] = ft_strndup((char *)s + d, f - d);
+        //printf("res[l] = %s\n", res[l]);
         l++;
         d = f;
     }
@@ -88,7 +93,7 @@ char **ft_split(char const *s, char c)
 int		main()
 {
  	char **arr;
- 	char *phrase = "                  olol ";
+ 	char *phrase = "olol";
  	arr = ft_split(phrase, ' ');
     int i = 0;
     while(arr[i])
