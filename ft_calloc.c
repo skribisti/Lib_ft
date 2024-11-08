@@ -6,27 +6,27 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:41:00 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 16:11:48 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:47:58 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-    char    *str;
-    size_t  i;
-    
-    str = malloc(nmemb * size);
-    if (!str)
-        return (NULL);
-    i = 0;
-    while (i < nmemb * size)
-    {
-        str[i] = 0;
-        i++;
-    }
-    return (str);
+	char	*str;
+	size_t	i;
+
+	str = malloc(nmemb * size);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (i < nmemb * size)
+	{
+		str[i] = 0;
+		i++;
+	}
+	return (str);
 }
 
 /*

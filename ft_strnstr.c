@@ -13,31 +13,30 @@
 #include <strings.h>
 #include "libft.h"
 
-char    *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-    size_t      i;
-    size_t      j;   
+	size_t	i;
+	size_t	j;
 
-    i = 0;
-    j = 0;
-    if (little[0] == '\0' || len == 0)
-        return ((char *)big);
-    if (big[0] == '\0')
-        return (NULL);
-    while (big[i] && j < ft_strlen(little))
-    {
-        j = 0;
-        while (big[i + j] == little[j] && i < len
-        && i + j < len)
-        {
-            j++;
-            if (j == ft_strlen(little))
-                return ((char *)big + i);
-            
-        }
-        i++;
-    }
-    return (NULL);
+	i = 0;
+	j = 0;
+	if (little[0] == '\0' || len == 0)
+		return ((char *)big);
+	if (big[0] == '\0')
+		return (NULL);
+	while (big[i] && j < ft_strlen(little))
+	{
+		j = 0;
+		while (big[i + j] == little[j] && i < len
+			&& i + j < len)
+		{
+			j++;
+			if (j == ft_strlen(little))
+				return ((char *)big + i);
+		}
+		i++;
+	}
+	return (NULL);
 }
 /*
 int main()
