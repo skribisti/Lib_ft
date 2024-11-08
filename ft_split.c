@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:29:14 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 11:00:47 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:02:55 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,11 @@ int ft_countwords(char const *s, char c)
     i = 0;
     while(s[i])
     {
-        if((!ft_issep(s[i], c) && ft_issep(s[i + 1], c)) || !s[i + 1])
+        if((!ft_issep(s[i], c) && ft_issep(s[i + 1], c)))
             cpt++;
         i++;
     }
-    printf("cpt words : %d\n", cpt);
+    //printf("cpt words : %d\n", cpt);
     return (cpt);
 }
 
@@ -84,12 +84,11 @@ char **ft_split(char const *s, char c)
     res[l] = 0;
     return (res);
 }
-
-
+/*
 int		main()
 {
  	char **arr;
- 	char *phrase = "                  olol";
+ 	char *phrase = "                  olol ";
  	arr = ft_split(phrase, ' ');
     int i = 0;
     while(arr[i])
@@ -97,4 +96,4 @@ int		main()
         printf("%s\n", arr[i]);
         i++;
     }
-}
+}*/
