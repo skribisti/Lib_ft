@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:32:22 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 12:33:41 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:38:34 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,6 @@ char *ft_itoa(int n)
 /*
 int main(void)
 {
-    int a = -5859; //156 -0 2147483647 -2147483648 -1234 -5859
+    int a = ;
     printf("My func : %s", ft_itoa(a));
 }*/
