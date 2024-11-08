@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 11:49:47 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 11:49:51 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:56:57 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 
 int        ft_isalpha(int c);
 int        ft_isdigit(int c);
