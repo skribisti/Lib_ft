@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:09:44 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 15:14:50 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:15:59 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void ft_putnbr_fd(int n, int fd)
     char    z;
 
     z = '0';
+    if (n == -2147483648)
+        write(fd, "-2147483648", 11);
     if (n < 0)
     {
         n = -n;
