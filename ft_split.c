@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:29:14 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 11:24:45 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:25:12 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ char    *ft_strndup(char *str, int  n)
     char    *tab;
     int     i;
 
-    //printf("n = %d\n", n);
     tab = (char *)malloc(ft_strlen(str) + 1);
-    //printf("len tab = %zu\n", ft_strlen(tab));
     if (!tab)
         return (NULL);
     i = 0;
@@ -52,7 +50,6 @@ int ft_countwords(char const *s, char c)
             cpt++;
         i++;
     }
-    //printf("cpt words : %d\n", cpt);
     return (cpt);
 }
 
@@ -75,14 +72,11 @@ char **ft_split(char const *s, char c)
     {
         while(ft_issep(s[d], c) && s[d])
             d++;
-        //printf("d = %d\n", d);
         f = d;
         while(!ft_issep(s[f], c) && s[f])
             f++;
-        //printf("f = %d\n", f);
         if (s[d])
             res[l] = ft_strndup((char *)s + d, f - d);
-        //printf("res[l] = %s\n", res[l]);
         l++;
         d = f;
     }
