@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:32:22 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 12:44:05 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:44:30 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t  ft_countsize(long nb)
         nb = nb / 10;
         s++;
     }
-    printf("s = %zu\n", s);
+    //printf("s = %zu\n", s);
     return (s);
 }
 
@@ -60,9 +60,9 @@ char *ft_itoa(int n)
     }
     return (str);
 }
-/*
+
 int main(void)
 {
     int a = 0;
     printf("My func : %s", ft_itoa(a));
-}*/
+}
