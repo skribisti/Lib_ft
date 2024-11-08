@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:32:22 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 14:02:36 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:03:47 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char *ft_itoa(int n)
     size_t  size;
     long    nb;
 
-    nb = (size_t)n;
+    nb = (long)n;
     size = ft_countsize(nb);
     str = (char *)malloc(sizeof(char) * (size + 1));
     if (!str)
