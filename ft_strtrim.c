@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:09:03 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 14:29:05 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:29:46 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int ft_incharset(const int c, const char *set)
 {
     int i;
 
+    i = 0;
     while((char)set[i])
     {
         if ((char)c == (char)set[i])
