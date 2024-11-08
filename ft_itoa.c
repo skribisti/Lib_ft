@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:32:22 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 13:52:24 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 13:56:09 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t  ft_countsize(long nb)
         nb = nb / 10;
         s++;
     }
-    //printf("s = %zu\n", s);
+    printf("s = %zu\n", s);
     return (s + 1);
 }
 
