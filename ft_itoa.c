@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:32:22 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 13:31:24 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 13:49:19 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,18 @@ size_t  ft_countsize(long nb)
     size_t  s;
     
     s = 0;
-    if (nb <= 0)
+    if (nb < 0)
     {
         nb = -nb;
         s++;
     }
-    while(nb)
+    while(nb >  9)
     {
         nb = nb / 10;
         s++;
     }
     //printf("s = %zu\n", s);
-    return (s);
+    return (s + 1);
 }
 
 char *ft_itoa(int n)
