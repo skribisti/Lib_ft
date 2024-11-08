@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:20:52 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 09:26:36 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 09:27:56 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     char    *str;
     size_t  i;
     
-    if (start >= ft_strlen(s) || !s)
+    if (!s)
         return (NULL);
+    if (start >= ft_strlen(s))
+        len = 0;
     str = malloc(len + 1);
     if (!str)
         return (NULL);
