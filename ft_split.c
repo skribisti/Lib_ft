@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:29:14 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 11:00:13 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:00:47 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char **ft_split(char const *s, char c)
         f = d;
         while(!ft_issep(s[f], c) && s[f])
             f++;
-        if (s[f] && res[l])
+        if (s[f])
             res[l] = ft_strndup((char *)s + d, f - d);
         l++;
         d = f;
