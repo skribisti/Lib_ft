@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:29:14 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 09:58:36 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 09:59:36 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ char **ft_split(char const *s, char c)
         l++;
         d = f;
     }
+    res[l] = 0;
     return (res);
 }
 
