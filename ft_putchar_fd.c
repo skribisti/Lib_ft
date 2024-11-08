@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:54:07 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 14:56:34 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:57:57 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void ft_putchar_fd(char c, int fd)
 {
-    write(fd, c, 1);
+    write(fd, &c, 1);
 }
