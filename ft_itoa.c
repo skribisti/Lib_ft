@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:32:22 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 12:38:34 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:40:34 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char *ft_itoa(int n)
 
     nb = (size_t)n;
     size = ft_countsize(nb);
-    str = (char *)malloc(size + 1);
+    str = (char *)malloc(size);
     if (!nb)
     {
         str[0] = '0';
@@ -60,9 +60,9 @@ char *ft_itoa(int n)
     }
     return (str);
 }
-/*
+
 int main(void)
 {
-    int a = ;
+    int a = 1000526;
     printf("My func : %s", ft_itoa(a));
-}*/
+}
