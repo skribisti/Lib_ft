@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:32:22 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 13:59:21 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:00:54 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ char *ft_itoa(int n)
         str[0] = '-';
         nb = -nb;
     }
+    printf("%d", size);
     str[size] = '\0';
     while(nb)
     {
