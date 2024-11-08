@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:58:30 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 15:00:01 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:00:12 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void ft_putstr_fd(char *s, int fd)
     
     i = -1;
     while(s[++i])
-        ft_putchar_fd(fd, s[i], 1);
+        ft_putchar_fd(fd, s[i]);
 }
