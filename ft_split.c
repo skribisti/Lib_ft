@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:29:14 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 09:59:36 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 10:44:10 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int ft_countwords(char const *s, char c)
     i = 0;
     while(s[i])
     {
-        if(!ft_issep(s[i], c) && ft_issep(s[i + 1], c) && s[i + 1])
+        if((!ft_issep(s[i], c) && ft_issep(s[i + 1], c)) || !s[i + 1])
             cpt++;
         i++;
     }
@@ -60,12 +60,15 @@ char **ft_split(char const *s, char c)
     char    **res;
     int     l;
 
-    res = (char **)malloc(ft_countwords(s, c));
+    if (!s)
+    return (NULL);
+    res = (char **)malloc(ft_countwords(s, c) + 1);
     if (!res)
         return (NULL);
     d = 0;
     l = 0;
-    while(s[d] && s[f])
+    f = 0;
+    while(s[d])
     {
         while(ft_issep(s[d], c) && s[d])
             d++;
@@ -87,10 +90,10 @@ int		main()
  	char **arr;
  	char *phrase = "allo ya dla merd dans ltuyau";
  	arr = ft_split(phrase, ' ');
- 	printf("%s\n", arr[0]);
- 	printf("%s\n", arr[1]);
- 	printf("%s\n", arr[2]);
-	printf("%s\n", arr[3]);
-	printf("%s\n", arr[4]);
-	printf("%s\n", arr[5]);
+    int i = 0;
+    while(arr[i])
+    {
+        printf("%s\n", arr[i]);
+        i++;
+    }
 }*/
