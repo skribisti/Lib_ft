@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 13:33:20 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 14:42:44 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:43:33 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     char    *res;
     int     i;
     
+    if(!s || !f)
+        return (NULL);
     res = (char *)malloc(ft_strlen(s) + 1);
     if(!res)
        return (NULL);
