@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:56:01 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 17:07:43 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:44:25 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char *ft_strjoin(char const *s1, char const *s2)
     size_t  i;
     size_t  j;
 
+    if (!s1 || !s2)
+        return (NULL);
     total_size = ft_strlen(s1) + ft_strlen(s2) + 1;
     res = (char *)malloc(total_size);
     if (!res)
