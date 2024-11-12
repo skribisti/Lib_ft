@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:16:38 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/12 13:28:48 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/12 15:34:07 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,8 @@ int	ft_atoi(const char *nptr)
 			sign = -sign;
 		i++;
 	}
-    if (!ft_isdigit(str[i]))
-    {
-        return (0);
-    }
+	if (!ft_isdigit(str[i]))
+		return (0);
 	while (ft_isdigit(str[i]))
 	{
 		res = res * 10 + str[i] - '0';

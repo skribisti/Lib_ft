@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:09:03 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 15:45:15 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/12 15:24:44 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_incharset(int c, char *set)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(set[i])
+	while (set[i])
 	{
 		if (c == set[i])
 			return (1);
@@ -35,11 +35,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	i = -1;
 	j = ft_strlen(s1);
-	while(s1[++i] && ft_incharset(s1[i], (char *)set) == 1)
+	while (s1[++i] && ft_incharset(s1[i], (char *)set) == 1)
 		;
-	while(s1[--j] && ft_incharset(s1[j], (char *)set) == 1)
+	while (s1[--j] && ft_incharset(s1[j], (char *)set) == 1)
 		;
-	return (ft_substr(s1, i , j - i + 1));  
+	return (ft_substr(s1, i, j - i + 1));
 }
 
 /*

@@ -6,38 +6,36 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:56:01 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 14:44:25 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/12 15:45:26 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    size_t  total_size;
-    char    *res;
-    size_t  i;
-    size_t  j;
+	char	*res;
+	size_t	i;
+	size_t	j;
 
-    if (!s1 || !s2)
-        return (NULL);
-    total_size = ft_strlen(s1) + ft_strlen(s2) + 1;
-    res = (char *)malloc(total_size);
-    if (!res)
-        return (NULL);
-    i = 0;
-    while(s1[i])
-    {
-        res[i] = s1[i];
-        i++;
-    }
-    j = 0;
-    while (s2[j])
-    {
-        res[i] = s2[j];
-        i++;
-        j++;
-    }
-    res[i] = 0;
-    return (res);
+	if (!s1 || !s2)
+		return (NULL);
+	res = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!res)
+		return (NULL);
+	i = 0;
+	while (s1[i])
+	{
+		res[i] = s1[i];
+		i++;
+	}
+	j = 0;
+	while (s2[j])
+	{
+		res[i] = s2[j];
+		i++;
+		j++;
+	}
+	res[i] = 0;
+	return (res);
 }
