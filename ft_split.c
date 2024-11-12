@@ -6,25 +6,19 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:29:14 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 11:25:12 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/12 14:35:08 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_issep(char a, char sep)
-{
-    if (a == sep)
-        return (1);
-    return (0);
-}
 
 char    *ft_strndup(char *str, int  n)
 {
     char    *tab;
     int     i;
 
-    tab = (char *)malloc(ft_strlen(str) + 1);
+    tab = (char *)malloc(n + 1);
     if (!tab)
         return (NULL);
     i = 0;
@@ -37,48 +31,53 @@ char    *ft_strndup(char *str, int  n)
     return (tab);
 }
 
-int ft_countwords(char const *s, char c)
+int	ft_countwords(char const *s, int c)
 {
-    int cpt;
-    int i;
+	int	i;
+	int	cpt;
+	int	in;
 
-    cpt = 0;
-    i = 0;
-    while(s[i])
-    {
-        if((!ft_issep(s[i], c) && ft_issep(s[i + 1], c)) || !s[i + 1])
-            cpt++;
-        i++;
-    }
-    return (cpt);
+	i = 0;
+	cpt = 0;
+	in = 0;
+	while (s[i])
+	{
+		if (s[i] != (char)c && in != 1)
+		{
+			in = 1;
+			cpt++;
+		}
+		if (s[i] == (char)c && in == 1)
+			in = 0;
+		i++;
+	}
+	return (cpt);
 }
 
-char **ft_split(char const *s, char c)
+char    **ft_split(char const *str, char c)
 {
-    int     d;
-    int     f;
     char    **res;
+    int     s;
+    int     e;
     int     l;
 
-    if (!s)
-    return (NULL);
-    res = (char **)malloc(ft_countwords(s, c) + 1);
+    if (!str)
+        return (NULL);
+    res = (char **)malloc(sizeof(char *) * ft_countwords((char *)str, c) + 1);
     if (!res)
         return (NULL);
-    d = 0;
+    s = 0;
     l = 0;
-    f = 0;
-    while(s[d])
+    while (str[s] && l < ft_countwords((char *)str, c))
     {
-        while(ft_issep(s[d], c) && s[d])
-            d++;
-        f = d;
-        while(!ft_issep(s[f], c) && s[f])
-            f++;
-        if (s[d])
-            res[l] = ft_strndup((char *)s + d, f - d);
+        while(str[s] == c && str[s])
+            s++;
+        e = s;
+        while(str[e]!= c && str[e])
+            e++;
+        res[l] = ft_strndup((char *)str + s, e - s);
         l++;
-        d = f;
+        s = e;
     }
     res[l] = 0;
     return (res);
@@ -87,8 +86,8 @@ char **ft_split(char const *s, char c)
 int		main()
 {
  	char **arr;
- 	char *phrase = "olol";
- 	arr = ft_split(phrase, ' ');
+    
+ 	arr = ft_split("", 'z');
     int i = 0;
     while(arr[i])
     {

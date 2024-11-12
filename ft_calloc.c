@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:41:00 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 15:47:58 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:56:42 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,15 @@ void	*ft_calloc(size_t nmemb, size_t size)
 /*
 int main(void)
 {
-    int size = 8539;
+	int size = 8539;
 
 	void * d1 = ft_calloc(size, sizeof(int));
 	void * d2 = calloc(size, sizeof(int));
-    if (memcmp(d1, d2, size * sizeof(int)))
-        printf("non");
-    else
-        printf("oui");
-    free(d1);
+	if (memcmp(d1, d2, size * sizeof(int)))
+		printf("non");
+	else
+		printf("oui");
+	free(d1);
 	free(d2);
-    return (0);
+	return (0);
 }*/

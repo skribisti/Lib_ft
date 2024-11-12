@@ -1,7 +1,8 @@
 SRC = *.c
 NAME = libft.a
 OBJ = ${SRC:.c=.o}
-FLAGS = -Wall -Werror -Wextra
+OBJ_BONUS = $(SRC:.c=.o) $(BONUS:.c=.o)
+FLAGS = -Wall -Wextra -Werror
 
 all : $(NAME)
 	@true
@@ -10,10 +11,16 @@ $(NAME) :
 	gcc -I $(FLAGS) -c $(FLAGS) $(SRC)
 	ar -rcs $(NAME) $(OBJ)
 
+bonus : clean
+	gcc $(FLAGS) -c $(SRC)
+	ar rcs $(NAME) $(OBJ)
+
 clean :
 	rm -f $(NAME)
+	rm -rf $(OBJ)
 
-fclean : clean
+fclean : 
+	rm -f $(NAME)
 	rm -rf $(OBJ)
 
 dev:
@@ -21,8 +28,4 @@ dev:
 
 re : fclean all
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
-
-.PHONY : all clean fclean re dev so
+.PHONY : all clean fclean re dev

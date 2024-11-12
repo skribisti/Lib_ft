@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:16:38 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/08 15:42:07 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/12 13:28:48 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,16 @@ int	ft_atoi(const char *nptr)
 	res = 0;
 	while ((str[i] == 32) || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	while (str[i] == '+' || str[i] == '-')
+	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
 			sign = -sign;
 		i++;
 	}
+    if (!ft_isdigit(str[i]))
+    {
+        return (0);
+    }
 	while (ft_isdigit(str[i]))
 	{
 		res = res * 10 + str[i] - '0';
