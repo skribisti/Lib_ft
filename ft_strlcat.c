@@ -6,12 +6,11 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:13:40 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 16:19:22 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:27:00 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -39,6 +38,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	return (total_len);
 }
-
-
-

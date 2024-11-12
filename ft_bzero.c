@@ -6,22 +6,22 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:28:51 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/05 11:10:15 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:19:35 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    size_t  i;
+	size_t	i;
 
-    i = 0;
-    while(i < n)
-    {
-        ((char *)s)[i] = 0;
-        i++;
-    }
+	i = 0;
+	while (i < n)
+	{
+		((char *)s)[i] = 0;
+		i++;
+	}
 }
 /*
 int main(void)

@@ -6,24 +6,24 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:05:28 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 11:14:50 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:20:18 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    char    *d;
-    char    *s;
-    
-    if (src == 0 && n != 0 && dest == 0)
-        return (NULL);
-    d = (char *)dest;
-    s = (char *)src;
-    while (n--)
-        d[n] = s[n];
-    return (dest);
+	char	*d;
+	char	*s;
+
+	if (src == 0 && n != 0 && dest == 0)
+		return (NULL);
+	d = (char *)dest;
+	s = (char *)src;
+	while (n--)
+		d[n] = s[n];
+	return (dest);
 }
 /*
 int main ()

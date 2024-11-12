@@ -6,13 +6,13 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:34:40 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/05 13:20:34 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:16:21 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int	c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);

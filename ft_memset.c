@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:50:45 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/05 11:11:08 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:18:41 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,9 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
 
-	i = 0;
-	while (i < n)
-	{
+	i = -1;
+	while (++i < n)
 		((char *)s)[i] = c;
-		//printf("%d \n", ((char *)s)[i]);
-		i++;
-	}
 	return (s);
 }
 /*

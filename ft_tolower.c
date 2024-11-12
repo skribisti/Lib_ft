@@ -6,13 +6,13 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:19:11 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/05 14:19:41 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:22:53 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if ('A' <= c && c <= 'Z')
-        c = c + 32;
-    return (c);
+		c = c + 32;
+	return (c);
 }

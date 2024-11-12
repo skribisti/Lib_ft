@@ -6,16 +6,16 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 12:42:42 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/07 14:47:23 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:26:44 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t    ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-    
+
 	i = 0;
 	if (size < 1)
 	{
@@ -26,10 +26,10 @@ size_t    ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[i] = src[i];
 		i++;
 	}
-    if (size > 0)
-    {
-	    dst[i] = '\0';
-        i++;
-    }
+	if (size > 0)
+	{
+		dst[i] = '\0';
+		i++;
+	}
 	return (ft_strlen(src));
 }
