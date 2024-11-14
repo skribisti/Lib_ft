@@ -6,11 +6,12 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:29:14 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/12 16:41:44 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:59:09 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strndup(char *str, int n)
 {
@@ -53,11 +54,25 @@ int	ft_countwords(char const *s, int c)
 	return (j);
 }
 
+void	ft_build_line(char **str, int *s, int *e, char *c)
+{
+	while (*str[*s] == *c && str[*s])
+		(*s)++;
+	*e = *s;
+	while (*str[*e] != *c && *str[*e])
+		(*e)++;
+}
+
+void	ft_free(char ***dst, int *i)
+{
+	while ((*i)--)
+		free(*dst[*i]);
+	free(*dst);
+}
+
 char	**ft_split(char const *str, char c)
 {
-	int		s;
-	int		e;
-	int		i;
+	int		*tab;
 	char	**dst;
 
 	if (!str)
@@ -65,28 +80,35 @@ char	**ft_split(char const *str, char c)
 	dst = (char **)malloc(sizeof(char *) * (ft_countwords(str, (int)c) + 1));
 	if (!dst)
 		return (NULL);
-	i = 0;
-	s = 0;
-	while (str[s] && i < ft_countwords(str, (int)c))
+	tab[2] = 0;
+	tab[0] = 0;
+	while (str[tab[0]] && tab[2] < ft_countwords(str, (int)c))
 	{
-		while (str[s] == c && str[s])
-			s++;
-		e = s;
-		while (str[e] != c && str[e])
-			e++;
-		dst[i] = ft_strndup((char *)str + s, e - s);
-		s = e;
-		i++;
+		ft_build_line(&((char *)str), &tab[0], &tab[1], &c);
+		dst[tab[2]] = ft_strndup((char *)str + tab[0], tab[1] - tab[0]);
+		if (!dst[tab[2]])
+		{
+			ft_free(&dst, &tab[2]);
+			return (NULL);
+		}
+		tab[0] = tab[1];
+		tab[2]++;
 	}
-	dst[i] = 0;
+	dst[tab[2]] = 0;
 	return (dst);
 }
+/*
+tab[0] = start
+tab[1] = end
+tab[2] = i
+*/
+
 /*
 int		main()
 {
  	char **arr;
     
- 	arr = ft_split("", 'z');
+ 	arr = ft_split("allo ya dla merd dans ltuyau", ' ');
     int i = 0;
     while(arr[i])
     {
