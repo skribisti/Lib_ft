@@ -6,12 +6,11 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:29:14 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 16:59:09 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:22:24 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strndup(char *str, int n)
 {
@@ -54,16 +53,16 @@ int	ft_countwords(char const *s, int c)
 	return (j);
 }
 
-void	ft_build_line(char **str, int *s, int *e, char *c)
+void	ft_build_line(char *str, int *s, int *e, char *c)
 {
-	while (*str[*s] == *c && str[*s])
+	while (str[*s] == *c && str[*s])
 		(*s)++;
 	*e = *s;
-	while (*str[*e] != *c && *str[*e])
+	while (str[*e] != *c && str[*e])
 		(*e)++;
 }
 
-void	ft_free(char ***dst, int *i)
+void	ft_free_dst(char ***dst, int *i)
 {
 	while ((*i)--)
 		free(*dst[*i]);
@@ -72,7 +71,7 @@ void	ft_free(char ***dst, int *i)
 
 char	**ft_split(char const *str, char c)
 {
-	int		*tab;
+	int		tab[3];
 	char	**dst;
 
 	if (!str)
@@ -84,11 +83,11 @@ char	**ft_split(char const *str, char c)
 	tab[0] = 0;
 	while (str[tab[0]] && tab[2] < ft_countwords(str, (int)c))
 	{
-		ft_build_line(&((char *)str), &tab[0], &tab[1], &c);
+		ft_build_line((char *)str, &tab[0], &tab[1], &c);
 		dst[tab[2]] = ft_strndup((char *)str + tab[0], tab[1] - tab[0]);
-		if (!dst[tab[2]])
+		if (dst[tab[2]] == NULL)
 		{
-			ft_free(&dst, &tab[2]);
+			ft_free_dst(&dst, &tab[2]);
 			return (NULL);
 		}
 		tab[0] = tab[1];
@@ -97,18 +96,19 @@ char	**ft_split(char const *str, char c)
 	dst[tab[2]] = 0;
 	return (dst);
 }
+
 /*
 tab[0] = start
 tab[1] = end
 tab[2] = i
 */
-
 /*
+#include <stdio.h>
 int		main()
 {
  	char **arr;
     
- 	arr = ft_split("allo ya dla merd dans ltuyau", ' ');
+ 	arr = ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", '^');
     int i = 0;
     while(arr[i])
     {

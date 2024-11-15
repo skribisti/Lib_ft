@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 10:02:24 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 16:11:48 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:24:03 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst && lst->next)
 	{
 		if (!temp)
+		{
+			ft_lstclear(&new, del);
 			return (NULL);
+		}
 		temp->next = ft_lstnew(f(lst->next->content));
 		temp = temp->next;
 		lst = lst->next;
